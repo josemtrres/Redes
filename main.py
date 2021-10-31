@@ -70,11 +70,8 @@ def Abrir_Archivo():
     next(csv_lec)
     for line in csv_lec:
       line_split=line[0].split(sep=";")
-      Nodo_A.append(int(line_split[0]))
-      Nodo_B.append(int(line_split[1]))
-      peso.append(int(line_split[2]))
-      Nodos.append(int(line_split[0]))
-      Nodos.append(int(line_split[1]))
+      Nodo_A.append(int(line_split[0])), Nodo_B.append(int(line_split[1])), peso.append(int(line_split[2]))
+      Nodos.append(int(line_split[0])), Nodos.append(int(line_split[1]))
       Matriz_csv.append([int(line_split[0]), int(line_split[1]), int(line_split[2])])
 
   for i in Nodos:
@@ -90,7 +87,7 @@ def Abrir_Archivo():
   plt.show()
 
 #Generacion_Radom(nodos, arcos)
-#Abrir_Archivo()
+Abrir_Archivo()
 
 #dijk = nx.single_source_shortest_path(G, origen)
 
