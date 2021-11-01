@@ -15,6 +15,11 @@ class Ui_LinkState(object):
     def setupUi(self, LinkState):
         LinkState.setObjectName("LinkState")
         LinkState.resize(506, 429)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(30)
+        sizePolicy.setVerticalStretch(30)
+        sizePolicy.setHeightForWidth(LinkState.sizePolicy().hasHeightForWidth())
+        LinkState.setSizePolicy(sizePolicy)
         self.label = QtWidgets.QLabel(LinkState)
         self.label.setGeometry(QtCore.QRect(20, 20, 471, 41))
         font = QtGui.QFont()
@@ -23,24 +28,43 @@ class Ui_LinkState(object):
         self.label.setFont(font)
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
-        self.archivocsv = QtWidgets.QLabel(LinkState)
-        self.archivocsv.setGeometry(QtCore.QRect(20, 220, 261, 41))
-        font = QtGui.QFont()
-        font.setPointSize(12)
-        self.archivocsv.setFont(font)
-        self.archivocsv.setObjectName("archivocsv")
-        self.archivo = QtWidgets.QTextEdit(LinkState)
-        self.archivo.setGeometry(QtCore.QRect(20, 260, 291, 31))
-        self.archivo.setObjectName("archivo")
         self.pushButton = QtWidgets.QPushButton(LinkState)
         self.pushButton.setGeometry(QtCore.QRect(410, 380, 75, 23))
         self.pushButton.setObjectName("pushButton")
-        self.radioButton = QtWidgets.QRadioButton(LinkState)
-        self.radioButton.setGeometry(QtCore.QRect(20, 130, 291, 41))
+        self.pushButton_2 = QtWidgets.QPushButton(LinkState)
+        self.pushButton_2.setGeometry(QtCore.QRect(30, 110, 171, 41))
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.textEdit = QtWidgets.QTextEdit(LinkState)
+        self.textEdit.setGeometry(QtCore.QRect(220, 210, 191, 31))
+        self.textEdit.setObjectName("textEdit")
+        self.label_2 = QtWidgets.QLabel(LinkState)
+        self.label_2.setGeometry(QtCore.QRect(30, 210, 191, 31))
+        self.label_2.setObjectName("label_2")
+        self.pushButton_3 = QtWidgets.QPushButton(LinkState)
+        self.pushButton_3.setGeometry(QtCore.QRect(40, 340, 30, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(30)
+        sizePolicy.setVerticalStretch(30)
+        sizePolicy.setHeightForWidth(self.pushButton_3.sizePolicy().hasHeightForWidth())
+        self.pushButton_3.setSizePolicy(sizePolicy)
+        self.pushButton_3.setMaximumSize(QtCore.QSize(30, 30))
         font = QtGui.QFont()
-        font.setPointSize(12)
-        self.radioButton.setFont(font)
-        self.radioButton.setObjectName("radioButton")
+        font.setPointSize(15)
+        self.pushButton_3.setFont(font)
+        self.pushButton_3.setStyleSheet("QPushButtom#pushButton_3{\n"
+"    background-color:rgba(0,0,0,0)\n"
+"    color:rgba(85, 989, 112, 255)\n"
+"}\n"
+"QPushButtom#pushButton_3:hover{\n"
+"    color:rgba(131,96,53,255)\n"
+"}\n"
+"QPushButtom#pushButton_3:pressed{\n"
+"    padding-left:5px;\n"
+"    padding-top:5px;\n"
+"    color:rgba(91,88,53,255)\n"
+"}")
+        self.pushButton_3.setText("")
+        self.pushButton_3.setObjectName("pushButton_3")
 
         self.retranslateUi(LinkState)
         QtCore.QMetaObject.connectSlotsByName(LinkState)
@@ -49,9 +73,9 @@ class Ui_LinkState(object):
         _translate = QtCore.QCoreApplication.translate
         LinkState.setWindowTitle(_translate("LinkState", "Form"))
         self.label.setText(_translate("LinkState", "LINK-STATE"))
-        self.archivocsv.setText(_translate("LinkState", "Ingrese el nombre del archivo \'.csv\'"))
         self.pushButton.setText(_translate("LinkState", "R U N"))
-        self.radioButton.setText(_translate("LinkState", "Generar grafo aleatorio"))
+        self.pushButton_2.setText(_translate("LinkState", "Grafo Aleatorio"))
+        self.label_2.setText(_translate("LinkState", "Grafo cargado por archivo \'.csv\'"))
 
 
 if __name__ == "__main__":

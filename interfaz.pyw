@@ -1,4 +1,4 @@
-import random, math, csv, os, sys
+import random, math, csv, os, sys, webbrowser
 import networkx as nx
 import matplotlib.pyplot as plt
 import numpy as np
@@ -42,14 +42,13 @@ class Window(QWidget):
         QtWidgets.QWidget.__init__(self, panrent)
         self.ui = Ui_LinkState()
         self.ui.setupUi(self)
-        if self.ui.radioButton.isChecked() == False:
-            self.ui.pushButton.clicked.connect(self.Generar_aleatorio)
-        else:
-            pass
 
-        filename  = self.ui.archivo.toPlainText()
-        if filename != " ":
+        if self.ui.pushButton_2.isChecked() == False:
+            self.ui.pushButton_2.clicked.connect(self.Generar_aleatorio)
+        if self.ui.textEdit.toPlainText() != " ":
             self.ui.pushButton.clicked.connect(self.Abrir_Archivo)
+        if self.ui.pushButton_3.isChecked() == False:
+           self.ui.pushButton_3.clicked.connect(self.sorpresa)
 
     def Generar_aleatorio(self):
         matriz = generar_matriz(nodos, arcos)
@@ -71,7 +70,7 @@ class Window(QWidget):
     def Abrir_Archivo(self):
         D = nx.DiGraph()
 
-        filename  = self.ui.archivo.toPlainText()
+        filename  = self.ui.textEdit.toPlainText()
 
         with open(filename, 'r') as csv_file:  
             csv_lec = csv.reader(csv_file)
@@ -93,7 +92,13 @@ class Window(QWidget):
         nx.draw_networkx_edge_labels(D, pos=pos_csv, edge_labels=valor_csv)
 
         plt.show()
-
+    
+    def sorpresa(self): #La mejor forma de programar es con una sonrisa :D
+        c = random.randrange(0,2)
+        if c == 1:
+            webbrowser.open_new("https://github.com/josemtrres/Redes")
+        else:
+            webbrowser.open_new("https://www.youtube.com/watch?v=PyoRdu-i0AQ")
     
 if __name__ == "__main__":
     aplicacion = QApplication(sys.argv)
