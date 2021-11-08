@@ -6,6 +6,10 @@ import numpy as np
 
 from PyQt5.QtWidgets import *
 from interfaz_ui import *
+
+#---
+#--- pyuic5 -x interfaz.ui -o interfaz_ui.py
+#---
 contador = 0
 inicial = time.time()
 final = time.time()
