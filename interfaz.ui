@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>512</width>
-    <height>501</height>
+    <width>522</width>
+    <height>532</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -24,7 +24,7 @@
     <rect>
      <x>20</x>
      <y>20</y>
-     <width>471</width>
+     <width>481</width>
      <height>41</height>
     </rect>
    </property>
@@ -35,7 +35,7 @@
     </font>
    </property>
    <property name="text">
-    <string>LINK-STATE</string>
+    <string>LINK - STATE</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -44,8 +44,8 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>440</y>
+     <x>170</x>
+     <y>480</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -57,18 +57,23 @@
   <widget class="QTextEdit" name="textEdit">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>140</y>
-     <width>191</width>
+     <x>220</x>
+     <y>150</y>
+     <width>251</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>140</y>
+     <x>50</x>
+     <y>150</y>
      <width>191</width>
      <height>31</height>
     </rect>
@@ -80,8 +85,8 @@
   <widget class="QPushButton" name="pushButton_3">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>440</y>
+     <x>80</x>
+     <y>480</y>
      <width>30</width>
      <height>30</height>
     </rect>
@@ -124,8 +129,8 @@ QPushButtom#pushButton_3:pressed{
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>80</y>
+     <x>50</x>
+     <y>90</y>
      <width>191</width>
      <height>31</height>
     </rect>
@@ -137,9 +142,9 @@ QPushButtom#pushButton_3:pressed{
   <widget class="QSlider" name="horizontalSlider">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>80</y>
-     <width>191</width>
+     <x>230</x>
+     <y>90</y>
+     <width>241</width>
      <height>21</height>
     </rect>
    </property>
@@ -150,8 +155,8 @@ QPushButtom#pushButton_3:pressed{
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>340</x>
-     <y>440</y>
+     <x>330</x>
+     <y>480</y>
      <width>111</width>
      <height>31</height>
     </rect>
@@ -163,10 +168,10 @@ QPushButtom#pushButton_3:pressed{
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>90</y>
+     <x>231</x>
+     <y>110</y>
      <width>16</width>
-     <height>31</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
@@ -176,8 +181,8 @@ QPushButtom#pushButton_3:pressed{
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>440</x>
-     <y>90</y>
+     <x>460</x>
+     <y>100</y>
      <width>16</width>
      <height>31</height>
     </rect>
@@ -189,7 +194,7 @@ QPushButtom#pushButton_3:pressed{
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>50</x>
      <y>200</y>
      <width>141</width>
      <height>31</height>
@@ -202,19 +207,19 @@ QPushButtom#pushButton_3:pressed{
   <widget class="QTableWidget" name="tableWidget">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>200</y>
-     <width>256</width>
-     <height>192</height>
+     <x>50</x>
+     <y>230</y>
+     <width>421</width>
+     <height>151</height>
     </rect>
    </property>
   </widget>
   <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>250</y>
-     <width>71</width>
+     <x>50</x>
+     <y>390</y>
+     <width>101</width>
      <height>31</height>
     </rect>
    </property>
@@ -225,21 +230,8 @@ QPushButtom#pushButton_3:pressed{
   <widget class="QLabel" name="label_8">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>250</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string> 0</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_9">
-   <property name="geometry">
-    <rect>
-     <x>120</x>
-     <y>310</y>
+     <x>160</x>
+     <y>390</y>
      <width>51</width>
      <height>31</height>
     </rect>
@@ -248,17 +240,30 @@ QPushButtom#pushButton_3:pressed{
     <string>0</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_10">
+  <widget class="QLabel" name="label_11">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>310</y>
-     <width>71</width>
+     <x>160</x>
+     <y>420</y>
+     <width>51</width>
      <height>31</height>
     </rect>
    </property>
    <property name="text">
-    <string>N° tiempo</string>
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_12">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>420</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>N° tiempo ejecución:</string>
    </property>
   </widget>
  </widget>

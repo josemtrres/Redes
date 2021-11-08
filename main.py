@@ -1,4 +1,4 @@
-import random, math, csv, os, sys
+import random, math, csv, os, sys, time
 from PyQt5.QtCore import lowercasebase
 import networkx as nx
 import matplotlib.pyplot as plt
@@ -166,6 +166,6 @@ def Abrir_Archivo():
 
   plt.show()
 
-#Generacion_Radom(nodos, arcos)
+Generacion_Radom(nodos, arcos)
 
 Abrir_Archivo()
