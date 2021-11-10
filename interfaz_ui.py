@@ -107,7 +107,7 @@ class Ui_LinkState(object):
 
     def retranslateUi(self, LinkState):
         _translate = QtCore.QCoreApplication.translate
-        LinkState.setWindowTitle(_translate("LinkState", "Form"))
+        LinkState.setWindowTitle(_translate("LinkState", "LinkState"))
         self.label.setText(_translate("LinkState", "LINK - STATE"))
         self.pushButton.setText(_translate("LinkState", "RUN Aleatorio"))
         self.label_2.setText(_translate("LinkState", "Grafo cargado por archivo \'.csv\'."))

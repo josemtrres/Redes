@@ -68,8 +68,7 @@ class Window(QWidget):
         vertices = []
         color_map = []
         tabla = []
-        iteraciones = []
-        
+    
         G = nx.DiGraph()
         
         for i in range(1, self.ui.horizontalSlider.value()+1):
@@ -132,7 +131,6 @@ class Window(QWidget):
         
         self.ui.label_8.setText(str(contador))
         
-        self.ui.tableWidget.setRowCount(len(iteraciones))
         
         final = time.time()
         self.ui.label_11.setText(str(final-inicial))
