@@ -56,21 +56,29 @@ class Window(QWidget):
         global contador
         contador == 0
         inicial = time.time()
+        nodos = self.ui.horizontalSlider.value()
+        string = ("Generando grafo aleatorio de "+ str(nodos) + " nodos.")
         self.ui.label.setText("LINK-STATE")
         self.ui.label_11.setText("0")
+        self.ui.label_3.setText(str(string))
+        self.ui.label_2.setText("Grafo cargado por archivo \'.csv\'.")
 
         l = []
         ll = []
         vertices = []
+        color_map = []
+        tabla = []
+        iteraciones = []
         
         G = nx.DiGraph()
-    
+        
         for i in range(1, self.ui.horizontalSlider.value()+1):
             G.add_node(i)
             vertices.append(i)
             contador += 1
-            
+        
         matriz = generar_matriz(self.ui.horizontalSlider.value())
+        
         for i in matriz:
             G.add_edge(i[0], i[1], weight=i[2])
             contador += 1
@@ -78,21 +86,16 @@ class Window(QWidget):
         origen = matriz[0][0]
 
         dijk = nx.shortest_path(G, source=origen)
+     
         for key in dijk:
             l.append(dijk[key])
             contador += 1
-            
-
         for i in range(len(l)):
             if i == 0:
                 ll.append(l[0][0])
             else:
                 ll.append(l[i][1])
             contador += 1
-                      
-                        
-        color_map = []
-        tabla = []
         for i in l:
             if G.has_edge(i[0], i[len(i)-1]):
                 a = i[0]
@@ -108,27 +111,31 @@ class Window(QWidget):
                         tabla.append([a, b, c])
                     contador += 1
             contador += 1
-            
+        
         self.tabla(tabla)
 
-        color_map = []
         for node in G:
             if node in ll:
                 color_map.append('red')
             else:
                 color_map.append('blue')
             contador += 1
-
+       
         pos = nx.spring_layout(G)
         valor = dict([((u, v,), d['weight']) for u, v, d in G.edges(data=True)])
         
         plt.clf()
+        
         plt.title('Grafo Aleatorio')
+        
         self.dibujar_final(G, pos, valor, color_map)
+        
         self.ui.label_8.setText(str(contador))
+        
+        self.ui.tableWidget.setRowCount(len(iteraciones))
+        
         final = time.time()
         self.ui.label_11.setText(str(final-inicial))
-    
         
     def Abrir_Archivo(self):
         global contador
@@ -144,7 +151,9 @@ class Window(QWidget):
         D = nx.DiGraph()
         try:
             self.ui.label.setText("LINK-STATE")
+            self.ui.label_3.setText("Grafo aleatorio entre 15 y 50 nodos.")
             self.ui.label_11.setText("0")
+            self.ui.label_2.setText("Grafo cargado")
             inicial = time.time()
             with open(filename, 'r') as csv_file:
                 csv_lec = csv.reader(csv_file)
@@ -228,7 +237,6 @@ class Window(QWidget):
     def tabla(self, tabla):
         global contador
         
-        contador == 0
         self.ui.tableWidget.setRowCount(len(tabla))
         for i in range (len(tabla)):
             for j in range(3):
@@ -238,7 +246,6 @@ class Window(QWidget):
         self.ui.tableWidget.horizontalHeader().setStretchLastSection(True)
         self.ui.tableWidget.horizontalHeader().setSectionResizeMode(
             QHeaderView.Stretch)
-            
 
     def sorpresa(self): #La mejor forma de programar es con una sonrisa :D
         c = random.randrange(0,2)

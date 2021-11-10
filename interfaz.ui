@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>522</width>
-    <height>532</height>
+    <height>521</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -45,7 +45,7 @@
    <property name="geometry">
     <rect>
      <x>170</x>
-     <y>480</y>
+     <y>470</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -86,7 +86,7 @@
    <property name="geometry">
     <rect>
      <x>80</x>
-     <y>480</y>
+     <y>470</y>
      <width>30</width>
      <height>30</height>
     </rect>
@@ -142,9 +142,9 @@ QPushButtom#pushButton_3:pressed{
   <widget class="QSlider" name="horizontalSlider">
    <property name="geometry">
     <rect>
-     <x>230</x>
+     <x>250</x>
      <y>90</y>
-     <width>241</width>
+     <width>221</width>
      <height>21</height>
     </rect>
    </property>
@@ -156,7 +156,7 @@ QPushButtom#pushButton_3:pressed{
    <property name="geometry">
     <rect>
      <x>330</x>
-     <y>480</y>
+     <y>470</y>
      <width>111</width>
      <height>31</height>
     </rect>
@@ -168,10 +168,10 @@ QPushButtom#pushButton_3:pressed{
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>231</x>
+     <x>250</x>
      <y>110</y>
-     <width>16</width>
-     <height>21</height>
+     <width>20</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="text">
@@ -182,9 +182,9 @@ QPushButtom#pushButton_3:pressed{
    <property name="geometry">
     <rect>
      <x>460</x>
-     <y>100</y>
-     <width>16</width>
-     <height>31</height>
+     <y>110</y>
+     <width>20</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="text">
